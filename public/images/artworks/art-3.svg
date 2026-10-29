@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4eef0"/>
+      <stop offset="100%" stop-color="#e9dfe3"/>
+    </linearGradient>
+    <filter id="paint" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="art-3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g filter="url(#paint)"><ellipse cx="216" cy="176" rx="240" ry="154" transform="rotate(-29 216 176)" fill="#a34a5f" opacity="0.51"/><ellipse cx="737" cy="305" rx="182" ry="218" transform="rotate(27 737 305)" fill="#dda0ad" opacity="0.28"/><ellipse cx="101" cy="210" rx="278" ry="199" transform="rotate(20 101 210)" fill="#6b2637" opacity="0.52"/><ellipse cx="231" cy="428" rx="172" ry="134" transform="rotate(33 231 428)" fill="#f0cdd4" opacity="0.37"/><ellipse cx="491" cy="428" rx="275" ry="225" transform="rotate(6 491 428)" fill="#a34a5f" opacity="0.39"/><ellipse cx="316" cy="67" rx="200" ry="127" transform="rotate(39 316 67)" fill="#dda0ad" opacity="0.48"/><ellipse cx="584" cy="377" rx="205" ry="234" transform="rotate(25 584 377)" fill="#6b2637" opacity="0.42"/><line x1="157" y1="413" x2="336" y2="248" stroke="#6b2637" stroke-width="19" stroke-linecap="round" opacity="0.22"/><line x1="345" y1="134" x2="347" y2="-35" stroke="#f0cdd4" stroke-width="12" stroke-linecap="round" opacity="0.22"/><line x1="403" y1="379" x2="596" y2="225" stroke="#a34a5f" stroke-width="23" stroke-linecap="round" opacity="0.22"/><line x1="278" y1="302" x2="204" y2="304" stroke="#dda0ad" stroke-width="9" stroke-linecap="round" opacity="0.22"/><line x1="734" y1="440" x2="707" y2="547" stroke="#6b2637" stroke-width="10" stroke-linecap="round" opacity="0.22"/></g>
+  <rect width="800" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>
